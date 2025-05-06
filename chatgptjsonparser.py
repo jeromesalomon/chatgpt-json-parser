@@ -121,12 +121,13 @@ st.markdown(
     """
     <div style='display: flex; align-items: center; justify-content: space-between;'>
         <a href="https://www.oncrawl.com/events/how-to-appear-in-chatgpt-practical-seo-strategies-for-ai-visibility/" target="_blank" style="text-decoration: none; font-size: 16px;">
-        Learn how to use it
+        Watch the tutorial
         </a>
         <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
-        Jérôme Salomon - Senior Tech SEO @ Oncrawl
+        Jérôme Salomon 
         </a>
     </div>
+    </br>
     """,
     unsafe_allow_html=True
 )
