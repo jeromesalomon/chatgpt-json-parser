@@ -106,7 +106,7 @@ def group_urls_for_copy(df):
         groups["Additional citations (supporting websites)"].extend(supporting)
         groups["Safe URLs"].extend(safe)
         groups["Blocked URLs"].extend(blocked)
-        groups["Relevant content URLs"].extend(relevant_set)
+        groups["Relevant URLs"].extend(relevant_set)
         groups["Not relevant enough URLs"].extend(not_relevant)
 
     # Deduplicate all groups
