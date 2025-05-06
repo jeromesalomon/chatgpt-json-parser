@@ -101,13 +101,13 @@ def group_urls_for_copy(df):
         search_set = set(clean_url(url) for url in search)
         not_relevant = sorted(search_set - relevant_set)
 
-        groups["Search results"].extend(search)
+        groups["All search results"].extend(search)
         groups["Main citations (sources footnote)"].extend(footnotes)
         groups["Additional citations (supporting websites)"].extend(supporting)
         groups["Safe URLs"].extend(safe)
-        groups["Relevant URLs"].extend(relevant_set)
-        groups["Not relevant URLs (from search)"].extend(not_relevant)
         groups["Blocked URLs"].extend(blocked)
+        groups["Relevant content URLs"].extend(relevant_set)
+        groups["Not relevant enough URLs"].extend(not_relevant)
 
     # Deduplicate all groups
     for key in groups:
@@ -116,8 +116,8 @@ def group_urls_for_copy(df):
     return groups
 
 # Streamlit UI
-st.title("Chat Export JSON Viewer")
-json_input = st.text_area("Paste your Chat JSON export here", height=300)
+st.title("ChatGPT JSON conversation parser")
+json_input = st.text_area("Paste your ChatGPT JSON here", height=300)
 
 if st.button("Parse JSON"):
     try:
