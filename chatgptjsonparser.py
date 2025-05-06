@@ -85,13 +85,17 @@ def group_urls_for_copy(df):
         "Main citations (sources footnote)": [],
         "Additional citations (supporting websites)": [],
         "Safe URLs": [],
-        "Not relevant URLs (from search)": []
+        "Relevant URLs": [],
+        "Not relevant URLs (from search)": [],
+        "Blocked URLs": []
     }
 
     for _, row in df.iterrows():
         footnotes = row.get('sources_footnote', [])
         supporting = row.get('supporting_websites', [])
         search = row.get('search_results', [])
+        blocked = row.get('blocked_urls', [])
+        safe = row.get('safe_urls', [])
 
         relevant_set = set(clean_url(url) for url in footnotes + supporting)
         search_set = set(clean_url(url) for url in search)
@@ -100,8 +104,10 @@ def group_urls_for_copy(df):
         groups["Search results"].extend(search)
         groups["Main citations (sources footnote)"].extend(footnotes)
         groups["Additional citations (supporting websites)"].extend(supporting)
-        groups["Safe URLs"].extend(row.get('safe_urls', []))
+        groups["Safe URLs"].extend(safe)
+        groups["Relevant URLs"].extend(relevant_set)
         groups["Not relevant URLs (from search)"].extend(not_relevant)
+        groups["Blocked URLs"].extend(blocked)
 
     # Deduplicate all groups
     for key in groups:
