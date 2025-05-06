@@ -1,4 +1,3 @@
-# streamlit_app.py
 import streamlit as st
 import pandas as pd
 import json
@@ -80,6 +79,36 @@ def generate_csv_download(df):
     href = f'<a href="data:file/csv;base64,{b64}" download="chat_data.csv">Download CSV</a>'
     return href
 
+def group_urls_for_copy(df):
+    groups = {
+        "Search results": [],
+        "Main citations (sources footnote)": [],
+        "Additional citations (supporting websites)": [],
+        "Safe URLs": [],
+        "Not relevant URLs (from search)": []
+    }
+
+    for _, row in df.iterrows():
+        footnotes = row.get('sources_footnote', [])
+        supporting = row.get('supporting_websites', [])
+        search = row.get('search_results', [])
+
+        relevant_set = set(clean_url(url) for url in footnotes + supporting)
+        search_set = set(clean_url(url) for url in search)
+        not_relevant = sorted(search_set - relevant_set)
+
+        groups["Search results"].extend(search)
+        groups["Main citations (sources footnote)"].extend(footnotes)
+        groups["Additional citations (supporting websites)"].extend(supporting)
+        groups["Safe URLs"].extend(row.get('safe_urls', []))
+        groups["Not relevant URLs (from search)"].extend(not_relevant)
+
+    # Deduplicate all groups
+    for key in groups:
+        groups[key] = sorted(set(groups[key]))
+
+    return groups
+
 # Streamlit UI
 st.title("Chat Export JSON Viewer")
 json_input = st.text_area("Paste your Chat JSON export here", height=300)
@@ -94,5 +123,13 @@ if st.button("Parse JSON"):
         else:
             st.dataframe(df)
             st.markdown(generate_csv_download(df), unsafe_allow_html=True)
+
+            # Display grouped URLs with copy-paste option
+            st.subheader("Grouped URLs")
+
+            url_groups = group_urls_for_copy(df)
+            for label, urls in url_groups.items():
+                with st.expander(label):
+                    st.text_area(f"{label}", "\n".join(urls), height=200)
     except Exception as e:
         st.error(f"Invalid JSON. Error: {e}")
