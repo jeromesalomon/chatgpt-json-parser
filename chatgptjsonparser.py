@@ -117,6 +117,19 @@ def group_urls_for_copy(df):
 
 # Streamlit UI
 st.title("ChatGPT JSON conversation parser")
+st.markdown(
+    """
+    <div style='display: flex; align-items: center; justify-content: space-between;'>
+        <a href="https://www.oncrawl.com/events/how-to-appear-in-chatgpt-practical-seo-strategies-for-ai-visibility/" target="_blank" style="text-decoration: none; font-size: 16px;">
+        Learn how to use it
+        </a>
+        <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
+        Jérôme Salomon - Senior Tech SEO @ Oncrawl
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 json_input = st.text_area("Paste your ChatGPT JSON here", height=300)
 
 if st.button("Parse JSON"):
