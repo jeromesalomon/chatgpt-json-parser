@@ -85,9 +85,9 @@ def group_urls_for_copy(df):
         "Main citations (sources footnote)": [],
         "Additional citations (supporting websites)": [],
         "Safe URLs": [],
-        "Relevant URLs": [],
-        "Not relevant URLs (from search)": [],
         "Blocked URLs": []
+        "Relevant URLs": [],
+        "Not relevant enough URLs": [],
     }
 
     for _, row in df.iterrows():
@@ -101,7 +101,7 @@ def group_urls_for_copy(df):
         search_set = set(clean_url(url) for url in search)
         not_relevant = sorted(search_set - relevant_set)
 
-        groups["All search results"].extend(search)
+        groups["Search results"].extend(search)
         groups["Main citations (sources footnote)"].extend(footnotes)
         groups["Additional citations (supporting websites)"].extend(supporting)
         groups["Safe URLs"].extend(safe)
