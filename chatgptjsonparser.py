@@ -85,9 +85,9 @@ def group_urls_for_copy(df):
         "Main citations (sources footnote)": [],
         "Additional citations (supporting websites)": [],
         "Safe URLs": [],
-        "Blocked URLs": []
+        "Blocked URLs": [],
         "Relevant URLs": [],
-        "Not relevant enough URLs": [],
+        "Not relevant enough URLs": []
     }
 
     for _, row in df.iterrows():
