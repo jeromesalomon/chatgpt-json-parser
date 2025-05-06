@@ -136,6 +136,6 @@ if st.button("Parse JSON"):
             url_groups = group_urls_for_copy(df)
             for label, urls in url_groups.items():
                 with st.expander(label):
-                    st.text_area(f"{label}", "\n".join(urls), height=200)
+                    st.text_area(f"", "\n".join(urls), height=200)
     except Exception as e:
         st.error(f"Invalid JSON. Error: {e}")
