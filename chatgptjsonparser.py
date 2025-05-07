@@ -126,7 +126,9 @@ st.markdown(
         <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
         Jérôme Salomon 
         </a>
-        </br>
+        </div>
+    <div style='display: flex; align-items: center; justify-content: space-between;'>
+    
         <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
