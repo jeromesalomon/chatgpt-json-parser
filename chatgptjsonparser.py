@@ -127,8 +127,7 @@ st.markdown(
         Jérôme Salomon 
         </a>
         </div>
-    <div style='display: flex; align-items: center; justify-content: space-between;'>
-    
+    <div style='display: flex; align-items: center;'>
         <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
