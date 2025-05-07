@@ -126,9 +126,11 @@ st.markdown(
         Built by <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
         JS</a> | SEO @ <a href="https://www.oncrawl.com/" target="_blank" style="text-decoration: none; font-size: 16px;">Oncrawl
         </a>
+        </br>
         </div>
+
     <div style='display: flex; align-items: center;'>
-    1) Open a ChatGPT conversation (with Search Activated) and find the json file:
+    1) Open a ChatGPT conversation (with Search Activated) and find the json file:</br>
         <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
