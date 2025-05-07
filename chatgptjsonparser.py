@@ -143,7 +143,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-#json_input = st.text_area("", height=300)
+json_input = st.text_area("", height=300)
 
 if st.button("Parse JSON"):
     try:
