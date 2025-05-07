@@ -123,21 +123,23 @@ st.markdown(
         <a href="https://www.oncrawl.com/events/how-to-appear-in-chatgpt-practical-seo-strategies-for-ai-visibility/" target="_blank" style="text-decoration: none; font-size: 16px;">
         Watch the tutorial on Oncrawl.com
         </a>
-    </div>    
+    </div> 
+    </br>
     <div style='display: flex; align-items: center; justify-content: space-between;'>
     
         <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
-        Jérôme Salomon</a>
-        </div>
-
-    <div style='display: flex; align-items: center;'>
-    1) Open a ChatGPT conversation (with Search Activated) and find the json file:
-    </div>
-        <div style='display: flex; align-items: center;'>
-
-        <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
+        Jérôme Salomon
+        </a>
     </div>
     </br>
+    <div style='display: flex; align-items: center; justify-content: space-between;'>
+    1) Open a ChatGPT conversation (with Search Activated) and find the json file:
+    </div>
+    </br>
+    <div style='display: flex; align-items: center;'>
+
+    <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
+    </div>
     """,
     unsafe_allow_html=True
 )
