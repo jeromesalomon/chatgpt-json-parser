@@ -127,7 +127,7 @@ st.markdown(
         Jérôme Salomon 
         </a>
         </br>
-        <img src="https://github.com/jeromesalomon/chatgpt-json-parser/blob/main/chatgptjson.jpeg" alt="Logo" width="100%">
+        <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
     """,
