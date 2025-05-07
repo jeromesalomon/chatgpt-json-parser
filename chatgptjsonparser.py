@@ -136,6 +136,7 @@ st.markdown(
 
     <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
+    </br>
     """,
     unsafe_allow_html=True
 )
