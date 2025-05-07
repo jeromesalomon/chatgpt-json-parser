@@ -129,7 +129,7 @@ st.markdown(
     </div>
     </br>
     <div style='display: flex; align-items: center; justify-content: space-between;'>
-    1) Open a ChatGPT conversation (with Search Activated) and find the json file:
+    1) Open a ChatGPT conversation (with Search Activated) and find the JSON file:
     </div>
     </br>
     <div style='display: flex; align-items: center;'>
@@ -137,10 +137,13 @@ st.markdown(
     <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
+    <div style='display: flex; align-items: center; justify-content: space-between;'>
+    2) Paste your ChatGPT JSON file here:
+    </div>
     """,
     unsafe_allow_html=True
 )
-json_input = st.text_area("2) Paste your ChatGPT JSON here", height=300)
+#json_input = st.text_area("", height=300)
 
 if st.button("Parse JSON"):
     try:
