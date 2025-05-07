@@ -121,20 +121,21 @@ st.markdown(
     """
     <div style='display: flex; align-items: center; justify-content: space-between;'>
         <a href="https://www.oncrawl.com/events/how-to-appear-in-chatgpt-practical-seo-strategies-for-ai-visibility/" target="_blank" style="text-decoration: none; font-size: 16px;">
-        Watch the tutorial
+        Watch the tutorial on 
         </a>
-        <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
-        Jérôme Salomon 
+        Built by <a href="https://www.linkedin.com/in/jeromesalomon/" target="_blank" style="text-decoration: none; font-size: 16px;">
+        JS</a> | SEO @ <a href="https://www.oncrawl.com/" target="_blank" style="text-decoration: none; font-size: 16px;">Oncrawl
         </a>
         </div>
     <div style='display: flex; align-items: center;'>
+    1) Open a ChatGPT conversation (with Search Activated) and find the json file:
         <img src="https://raw.githubusercontent.com/jeromesalomon/chatgpt-json-parser/refs/heads/main/chatgptjson.jpeg" width="100%">
     </div>
     </br>
     """,
     unsafe_allow_html=True
 )
-json_input = st.text_area("Paste your ChatGPT JSON here", height=300)
+json_input = st.text_area("2) Paste your ChatGPT JSON here", height=300)
 
 if st.button("Parse JSON"):
     try:
